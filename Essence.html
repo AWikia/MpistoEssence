@@ -88,8 +88,6 @@ body:after {
 
 	.navbar {
 		height:49px;
-		-webkit-box-sizing:border-box;
-		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 		width:100%;
 		background-color:#c435b6;
@@ -121,11 +119,109 @@ body:after {
 		color:whitesmoke;
 		text-decoration:none!important;
 		font-size:18px;
+		white-space:nowrap;
 	}
-	.navbar .link:hover {
+	.navbar .link:hover, .navbar .dropdown:hover .link {
 		background-color:#e310cd;
 		color:white;
 	}
+
+	.navbar .link .name {
+		font-size:80%;
+		font-weight:bolder;
+		max-width:80px;
+		text-overflow:ellipsis;
+		overflow:hidden;
+		display:inline-block;
+		margin-left:2px;
+		vertical-align:middle;
+	}
+
+
+	.navbar .link.company {
+		width:100%;
+	}
+
+
+	.dropdown {
+		display:table-cell;
+		position:relative;
+	}
+
+	.navbar .dropdown {
+		vertical-align:top;
+	}
+	
+		.dropdown-content {
+		display:none;
+	background-color:#F4EFF9;
+	left:50%;
+        -webkit-transform:translateX(-50%);
+            -ms-transform:translateX(-50%);
+                transform:translateX(-50%);
+	   	color:#011101;
+	   	padding:9px;
+		border:1px solid #9c2a90;
+	   	border-radius:5px;
+		position:absolute;
+		top:100%;
+			    box-shadow:0 4px 8px 0 rgba(0,0,0,.2), 0 4px 8px 0 rgba(255,255,255,0.2);
+		width:auto;
+		z-index:2
+	 }
+
+	.dropdown-content.left {
+	left:0%;
+        -webkit-transform:none;
+            -ms-transform:none;
+                transform:none;
+		min-width:150px;
+	}
+
+	.dropdown-content.right {
+	left:auto;
+	right:0%;
+        -webkit-transform:none;
+            -ms-transform:none;
+                transform:none;
+		min-width:150px;
+	}
+
+	 
+	 .dropdown-content a {
+      display: block;
+      color: inherit;
+      cursor: pointer;
+      padding: 8.5px;
+      font-size:14px;
+      text-decoration: none;
+      line-height: 1;
+      transition:all 400ms ease 10ms;
+      border:1px solid transparent;
+      box-shadow:0 0 0 1px transparent;
+	  white-space:nowrap;
+	  border-radius:3px;
+	 }
+
+	 .dropdown-content a:hover {
+		color:white;
+		background-color:#c435b6;
+		border-color:rgba(248,248,248,0.6);
+		box-shadow:0 0 0 1px #c435b6;
+	 }
+	 
+	.dropdown:hover .dropdown-content {
+		display:inline-block;
+	}
+
+ .dropdown::after,.dropdown::before{bottom:-1px;content:'';display:none;height:0;left:50%;position:absolute;width:0;z-index:2}
+ 
+ .dropdown::after{border:7px solid transparent;border-bottom-color:#f4eff9;margin-left:-7px}
+
+.dropdown::before{border:8px solid transparent;border-bottom-color:#9c2a90;margin-left:-8px}
+
+.dropdown:hover::after,.dropdown:hover::before{display:block}
+
 	.navbar .link.company {
 		width:100%;
 	}
@@ -238,8 +334,6 @@ body:after {
 	}
 
 	.content {
-		-webkit-box-sizing:border-box;
-		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 		border:1px solid #9c2a90;
 		color:#011101;
@@ -325,8 +419,6 @@ body:after {
 	}
 
 	.article-wrapper {
-		-webkit-box-sizing:border-box;
-		-moz-box-sizing:border-box;
 	box-sizing:border-box;
 	padding:0 0 10px;
 	width:100%;
@@ -335,8 +427,6 @@ body:after {
 	.article {
 		width:calc(100% - 320px);
 		float:left;
-		-webkit-box-sizing:border-box;
-		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.article h2 {
@@ -345,9 +435,6 @@ body:after {
 	.right-rail {
 		width:320px;
 		float:right;
-		-webkit-box-sizing:border-box;
-		-moz-box-sizing:border-box;
-		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 
@@ -402,8 +489,6 @@ position:relative;
 z-index:49;
 padding:0 18px;
 box-shadow:0 0 9px #9c2a90, 0 0 2.5px #000, 0 0 1.5px #fff;
--webkit-box-sizing:border-box;
--moz-box-sizing:border-box;
 box-sizing:border-box;
 font-family:Source Sans Pro, "Prompt",  "M PLUS 1p", "Gothic A1";
 }
@@ -612,16 +697,33 @@ font-size:28px;
 	<header class="table navbar">
 		<div class="navbar-wrapper">
 			<div class="tr">
-				<a class="link cell">
-					<svg xmlns="http://www.w3.org/2000/svg" class="icon ">
+				<div class="dropdown">
+					<a class="link cell">
+						<svg xmlns="http://www.w3.org/2000/svg" class="icon ">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-menu" /> </svg>
-				</a>
+					</a>
+					<div class="dropdown-content left">
+						<a>Company</a>
+						<a>Hiring</a>
+						<a href="https://awikia.github.io/Mpisto">Mpisto War 2018</a>
+						<a href="https://awikia.github.io/MpistoClassic">Mpisto 2018</a>
+						<a href="https://github.com/AWikia">GitHub</a>
+						<a href="https://github.com/AWikia/MpistoEssence/archive/master.zip">Download Source</a>
+					</div>
+				</div>
 				<a class="company cell link">
 					MpistoEssence
 				</a>
-				<a class="link cell">
-					<img class="avatar" src="HM100.png"></img>
-				</a>
+				<div class="dropdown">
+					<a class="link cell">
+						<img class="avatar" src="HM100.png"></img><span class="name">HM100</span>
+					</a>
+					<div class="dropdown-content right">
+						<a>Profile</a>
+						<a>Preferences</a>
+						<a>Log out</a>
+					</div>
+				</div>
 				<a class="link cell">
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-magnifying-glass" /> 
@@ -638,7 +740,7 @@ font-size:28px;
 						<div class="tr">
 							<a class="wordmark cell" style="text-align:left"><img src="Essencemark.png"></img></a>
 							<h1 class="title cell" style="text-align:left">MpistoEssence</h1>
-							<div class="counter cell"><big>203</big> <span>Articles</span></div>
+							<div class="counter cell"><big>376</big> <span>Articles</span></div>
 							<a class="link cell" title="Main page"><svg xmlns="http://www.w3.org/2000/svg" class="icon">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-house" /> 
 					</svg></a>
