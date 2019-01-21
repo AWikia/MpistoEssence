@@ -37,7 +37,10 @@
 
 	html {
 	background-color:#6fb894;	
+	scrollbar-color:#c435b6 #6fb894;
 	}
+	
+
 
 	body {
 		width:100%;
@@ -392,6 +395,14 @@ body:after {
 		width:100%;
 		text-align:right;
 	}
+	
+	.page-header h1 {
+		margin:-14px 0 8px;
+		line-height:1.5;
+		border-bottom:1px solid #9c2a90;
+		font-size:40px;
+		text-align:left;
+	}
 
 	.color-header {
 		margin:-1px -2px -2px;
@@ -445,6 +456,15 @@ body:after {
 		height:55px;
 		padding:0 18px;
 	}
+
+		.color-header .title a {
+			color:inherit;
+		}
+
+		.color-header .title a:hover {
+			color:white;
+		}
+
 
 	.article-wrapper {
 	box-sizing:border-box;
@@ -550,6 +570,10 @@ box-sizing:border-box;
 
 footer.footer .wrapper .footer-container th {
 width:100%;
+}
+
+footer.footer .wrapper .footer-container th .wordmark {
+	max-height:65px;
 }
 
 footer.footer .wrapper .footer-container th h1 {
@@ -763,8 +787,8 @@ footer.footer .wrapper .footer-container td a:hover {
 					<div class="table">
 						<div class="tr">
 							<a class="wordmark cell" style="text-align:left"><img src="Essencemark.png"></img></a>
-							<h1 class="title cell" style="text-align:left">MpistoEssence</h1>
-							<div class="counter cell"><big>1054</big> <span>Articles</span></div>
+							<h1 class="title cell" style="text-align:left"><a>MpistoEssence</a></h1>
+							<div class="counter cell"><big>1102</big> <span>Articles</span></div>
 							<a class="link cell" title="Main page"><svg xmlns="http://www.w3.org/2000/svg" class="icon">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-house" /> 
 					</svg></a>
@@ -782,6 +806,10 @@ footer.footer .wrapper .footer-container td a:hover {
 			</header>
 		<div class="wrapper clr">
 			<header class="page-header">
+				<div class="title">
+					<h1>Main Page</h1>
+				</div>
+				<div>
 				<div class="button-group">
 					<button><svg xmlns="http://www.w3.org/2000/svg" class="icon">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-pencil" /> 
@@ -802,6 +830,7 @@ footer.footer .wrapper .footer-container td a:hover {
 				<button secondary><span><svg xmlns="http://www.w3.org/2000/svg" class="icon">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-download" /> 
 					</svg> <span>Export to Mpisto War</span></span></button>
+				</div>
 			</header>
 			<div class="article-wrapper clr">
 				<article class="article">
