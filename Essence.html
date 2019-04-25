@@ -133,6 +133,8 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900|Noto+Sans+KR:100,300,400,500,700,900|Noto+Sans:400,700&subset=cyrillic,cyrillic-ext,devanagari,greek,greek-ext,japanese,korean,latin-ext,vietnamese');
 
 @import url('https://fonts.googleapis.com/css?family=Arimo:400,700|Noto+Sans+JP:100,300,400,500,700,900|Noto+Sans+KR:100,300,400,500,700,900|Noto+Sans+SC:100,300,400,500,700,900|Noto+Sans+TC:100,300,400,500,700,900|Noto+Sans:400,700&subset=chinese-simplified,chinese-traditional,cyrillic,cyrillic-ext,devanagari,greek,greek-ext,hebrew,japanese,korean,latin-ext,vietnamese');
+@import url('https://rsms.me/inter/inter.css');
+
 @font-face {
     font-family:  Mpisto;
     src:url('MpistoU2019-MediumCondensed.ttf') format('truetype');
@@ -233,7 +235,7 @@
 	body {
 		width:100%;
 		height:100%;
-		font-family:"Mpisto", "Flockk", "Source Sans Pro", "Noto Sans", "Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC";
+		font-family:"Inter", -apple-system, BlinkMacSystemFont, "Mpisto", "Flockk", "Source Sans Pro", "Noto Sans", "Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC";
 		margin:0;
 		font-weight:500;
 	}
@@ -631,11 +633,21 @@ body:after {
 		width:100%;
 		text-align:right;
 	}
+
+	.page-header .title {
+		border-bottom:1px solid #9c2a90;
+		padding:0 18px;	
+		margin:-16px -19px 8px;
+		color:#fff;
+		background-color:#e310cd;
+		background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIzNSUiIHN0b3AtY29sb3I9IiNlMzEwY2QiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI3MCUiIHN0b3AtY29sb3I9IiNjNDM1YjYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); /* Internet Explorer 9 */
+background: linear-gradient(to bottom, #e310cd 35%,#c435b6 70%); /* Standard */		
+		background-clip:padding-box;
+	}
 	
 	.page-header h1 {
-		margin:-14px 0 8px;
+		margin:0;
 		line-height:1.5;
-		border-bottom:1px solid #9c2a90;
 		font-size:40px;
 		text-align:left;
 	}
@@ -1029,7 +1041,7 @@ footer.footer .wrapper .footer-container td a:hover {
 						<div class="tr">
 							<a class="wordmark cell" style="text-align:left"><img src="Essencemark.png"></img></a>
 							<h1 class="title cell" style="text-align:left"><a>MpistoEssence</a></h1>
-							<div class="counter cell"><big>1806</big> <span>Articles</span></div>
+							<div class="counter cell"><big>2320</big> <span>Articles</span></div>
 							<a class="link cell" title="Main page"><svg xmlns="http://www.w3.org/2000/svg" class="icon">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wds-icons-house" /> 
 					</svg></a>
